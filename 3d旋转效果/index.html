@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D旋转效果</title>
+    <style>
+        *{margin: 0;
+          padding: 0;
+        }
+        div{
+            width: 500px;
+            height: 500px;
+            margin:30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px;
+        }
+        @keyframes move{
+           0%{transform: rotate3D(1,1,1,0deg);}
+
+            100%{transform: rotate3D(1,1,1,360deg);}
+        }
+
+        ul{
+
+            width: 300px;
+            height: 300px;
+            list-style: none;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: move 6s linear infinite;
+            transform-origin: center center 150px;
+        }
+        li{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            opacity: 0.4;
+            position: absolute;
+            font-size: 48px;
+            color: white;
+        }
+        li:nth-child(1){
+            background: #ff0000;
+
+        }
+        li:nth-child(2){
+            background: orange;
+            transform: translateX(300px);
+            transform: rotateY(90deg);
+            transform-origin: right;
+        }
+        li:nth-child(3){
+            background: yellow;
+            transform: translateX(-300px);
+            transform: rotateY(-90deg);
+            transform-origin: left;
+
+        }
+        li:nth-child(4){
+            background: green;
+            transform: translateY(300px);
+            transform-origin: top;
+            transform: rotateX(90deg);
+        }
+        li:nth-child(5){
+            background: burlywood;
+            transform: translateY(-300px);
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+        li:nth-child(6){
+            background: purple;
+            transform: translateZ(300px);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+</html>
