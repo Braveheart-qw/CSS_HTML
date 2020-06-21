@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折扇效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            width: 50px;
+            position: relative;
+            margin: 50px auto;
+
+        }
+        ul>li{
+            width: 50px;
+            height: 150px;
+            box-shadow: 3px 5px 5px #333333;
+            position: absolute;
+            transform-origin: bottom center;
+            transition: all 1s linear;
+            opacity: 0.9;
+        }
+        ul:hover li:nth-child(1){
+            background: red;
+        }
+        ul:hover li:nth-child(2){
+            background: orange;
+            transform: rotate(-15deg);
+        }
+        ul:hover li:nth-child(3){
+            background: yellow;
+            transform: rotate(-30deg);
+        }
+        ul:hover li:nth-child(4){
+            background: green;
+            transform: rotate(-45deg);
+        }
+        ul:hover li:nth-child(5){
+            background: cyan;
+            transform: rotate(-60deg);
+        }
+        ul:hover li:nth-child(6){
+            background: blue;
+            transform: rotate(-75deg);
+        }
+        ul:hover li:nth-child(7){
+            background: purple;
+            transform: rotate(-90deg);
+        }
+        ul:hover li:nth-child(8){
+            background: purple;
+            transform: rotate(15deg);
+        }
+        ul:hover li:nth-child(9){
+            background: cyan;
+            transform: rotate(30deg);
+        }
+        ul:hover li:nth-child(10){
+            background: orange;
+            transform: rotate(45deg);
+        }
+        ul:hover li:nth-child(11){
+            background: blue;
+            transform: rotate(60deg);
+        }
+        ul:hover li:nth-child(12){
+            background: green;
+            transform: rotate(75deg);
+        }
+        ul:hover li:nth-child(13){
+            background: yellow;
+            transform: rotate(90deg);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+</body>
+</html>
