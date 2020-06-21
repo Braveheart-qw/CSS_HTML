@@ -1,0 +1,8 @@
+案例总结：
+1.使用position脱离文档流，让子元素重叠
+2.使用transform: rotate()达到旋转效果
+3.使用transition达成动画过渡效果
+4.hover 可以触发其它元素效果
+如：box:hover ul{
+
+        }
