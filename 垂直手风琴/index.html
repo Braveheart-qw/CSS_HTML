@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直手风琴</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 500px;
+            list-style: none;
+            margin: 50px auto;
+        }
+
+        ul>li{
+            width:100%;
+            position: relative;
+        }
+        /**
+        将a标签设为块级元素，
+        使宽高的设置生效
+        */
+        ul li>a{
+            display: block;
+            width: 488px;
+            height: 35px;
+            border-radius: 12px;
+            line-height: 35px;
+            color: black;
+            text-decoration: none;
+            background: linear-gradient(#cecece,#8f8f8f);
+            padding-left: 12px;
+
+        }
+        /**
+        设置p标签布局，并且高度为0
+        达成隐藏效果
+        */
+        ul li>p{
+            margin: 5px 10px;
+            width: 490px;
+            height: 0px;
+            overflow: auto;
+            transition: all 0.5s linear;
+        }
+
+        /**
+        利用border为span标签制作出小箭头*/
+        li span{
+            width: 0;
+            height: 0;
+            border-top: 5px solid  rgba(0,0,0,0);;
+            border-right: 5px solid rgba(0,0,0,0);
+            border-bottom: 5px solid rgba(0,0,0,0);
+            border-left: 5px solid #ffffff;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transition: all 0.2s linear;
+        }
+
+        /**
+       悬浮事件
+       hover
+        */
+        li>a:hover{
+            background: linear-gradient(#6bb2ff,#2288dd);
+        }
+
+
+    /**
+          点击事件
+          target
+       */
+       li:target p{
+           height: 100px;
+       }
+       li:target a{
+           background: linear-gradient(#6bb2ff,#2288dd);
+       }
+       li:target span{
+           transform: rotate(90deg);
+       }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="brand">
+            <a href="#brand">Brand</a>
+            <p>Binzhou Medical University is a common medical university at provincia
+                l level in Shandong Province，and its predecessor was the Public Medi
+                cal Sch ool of Shandong University originally established in 1946. Th
+                e university follows its school-running tradition that “teaching comes
+                first, and quality is prior to any o thers” and that “the education of
+                man is a fundamental, and moral education has the pr iority”, and puts
+                into practices its university dictum of “benevolent mind and wonderful
+                skills”. Sticking to th centeredness on the cultivation of talents and
+                that on the improv ement of quality, it has</p>
+            <span></span>
+        </li>
+        <li id="brand2">
+            <a href="#brand2">Medical</a>
+            <p>Binzhou Medical University is a common medical university at provincia
+                l level in Shandong Province，and its predecessor was the Public Medi
+                cal Sch ool of Shandong University originally established in 1946. Th
+                e university follows its school-running tradition that “teaching comes
+                first, and quality is prior to any o thers” and that “the education of
+                man is a fundamental, and moral education has the pr iority”, and puts
+                into practices its university dictum of “benevolent mind and wonderful
+                skills”. Sticking to th centeredness on the cultivation of talents and
+                that on the improv ement of quality, it has</p>
+            <span></span>
+        </li>
+        <li id="brand3">
+            <a href="#brand3">Comman</a>
+            <p>Binzhou Medical University is a common medical university at provincia
+                l level in Shandong Province，and its predecessor was the Public Medi
+                cal Sch ool of Shandong University originally established in 1946. Th
+                e university follows its school-running tradition that “teaching comes
+                first, and quality is prior to any o thers” and that “the education of
+                man is a fundamental, and moral education has the pr iority”, and puts
+                into practices its university dictum of “benevolent mind and wonderful
+                skills”. Sticking to th centeredness on the cultivation of talents and
+                that on the improv ement of quality, it has</p>
+            <span></span>
+        </li>
+    </ul>
+</body>
+</html>

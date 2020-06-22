@@ -1,0 +1,15 @@
+案例总结：
+1.target的用法：
+        可以看成被访问的意思
+        如：li:target p{
+
+        }
+
+        分析：li:target:就是有一个锚点访问到了li标签，这时候li标签就是被突出的，因此将会执行li:target{
+                sheetstyle
+            }
+
+            而li:target p:就是被突出的li标签下的p标签执行样式{
+                sheetstyle
+            }
+
