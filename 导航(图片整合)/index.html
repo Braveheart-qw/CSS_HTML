@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        ul{
+            list-style: none;
+            border: 1px solid #cccccc;
+            height: 60px;
+            display: inline-flex;
+        }
+        ul li>a{
+            width: 120px;
+            height: 60px;
+            border-right: 1px dashed #cccccc;
+            display: block;
+            line-height: 60px;
+            text-decoration: none;
+            color: gray;
+            padding-left: 5px;
+            text-align: center;
+            transition: 0.3s linear;
+            /**
+            利用整合技术
+             */
+            background: url("image/sum_img.png");
+        }
+
+        ul li:nth-child(1) a{
+            background-position: left -34px top 17px;
+
+        }
+
+        ul  li:nth-child(1) a:hover{
+            background-position: left -192px top 17px;
+        }
+
+        ul  li:nth-child(2) a{
+            background-position: left -28px top -44px;
+        }
+
+        ul  li:nth-child(2) a:hover {
+            background-position: left -192px top -44px;
+        }
+        ul  li:nth-child(3) a{
+            background-position: left -28px top -108px;
+        }
+
+        ul  li:nth-child(3) a:hover {
+            background-position: left -192px top -108px;
+        }
+        ul  li:nth-child(4) a{
+            background-position: left -28px top -170px;
+        }
+
+        ul  li:nth-child(4) a:hover {
+            background-position: left -192px top -170px;
+        }
+        ul  li:nth-child(5) a{
+            background-position: left -28px top -230px;
+        }
+
+        ul  li:nth-child(5) a:hover {
+            background-position: left -192px top -230px;
+        }
+        ul  li:nth-child(5) a{
+            background-position: left -28px top -294px;
+        }
+
+        ul  li:nth-child(5) a:hover {
+            background-position: left -192px top -294px;
+        }
+        ul  li:nth-child(6) a{
+            background-position: left -26px top -355px;
+        }
+
+        ul  li:nth-child(6) a:hover {
+            background-position: left -192px top -355px;
+        }
+        ul  li:nth-child(7) a{
+            background-position: left -28px top -416px;
+        }
+
+        ul  li:nth-child(7) a:hover {
+            background-position: left -192px top -416px;
+        }
+        ul  li:nth-child(8) a{
+            background-position: left -28px top -230px;
+            border-right: none;
+        }
+        ul  li:nth-child(8) a:hover {
+            background-position: left -192px top -230px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">安全管家</a></li>
+        <li><a href="#">记事本</a></li>
+        <li><a href="#">时钟</a></li>
+        <li><a href="#">沙漏</a></li>
+        <li><a href="#">定位</a></li>
+        <li><a href="#">地图</a></li>
+        <li><a href="#">指针</a></li>
+        <li><a href="#">笔记本</a></li>
+    </ul>
+</body>
+</html>
