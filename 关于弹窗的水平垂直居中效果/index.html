@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗的水平垂直居中效果</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000000;
+
+        /**1.利用position定位到居中位置然后减掉自身宽高的一半*/
+
+            /*position: fixed;*/
+            /*left: 50%;*/
+            /*top: 50%;*/
+            /*margin-top: -200px;*/
+            /*margin-left: -200px;*/
+
+        /**2.第一种方法的扩展 利用translate代替margin的作用*/
+        /*    position: fixed;*/
+        /*    left: 50%;*/
+        /*    top: 50%;*/
+        /*    transform: translate(-200px , -200px);*/
+
+        /**3.小技巧 常用*/
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+        /*p{*/
+        /*    width: 150px;*/
+        /*    height: 150px;*/
+        /*    border: 1px solid #ff0000;*/
+        /*    position: absolute;*/
+        /*    left: 0;*/
+        /*    top: 0;*/
+        /*    bottom: 0;*/
+        /*    right: 0;*/
+        /*    margin: auto;*/
+        /*}*/
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p></p>
+    </div>
+</body>
+</html>
