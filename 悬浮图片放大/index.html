@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片放大</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        h3{
+            text-align: center;
+            font-size: 17px;
+            color: crimson;
+            margin-bottom: 5px;
+        }
+
+        ul{
+            list-style: none;
+            max-width: 650px;
+            border-top: 1px dashed #cccccc;
+            margin: auto;
+            padding-top: 13px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .clean{
+            clear: both;
+        }
+        ul>li{
+            margin: 6px;
+            border: 1px solid #dddddd;
+            padding: 5px;
+            position: relative;
+
+
+        }
+
+        li img{
+            width: 100px;
+            height: 75px;
+            border: 1px solid #aaaaaa;
+            padding: 2px;
+            display: block;
+        }
+
+        li img:nth-child(2){
+            display: none;
+            position: absolute;
+            left: -25px;
+            top: -25px;
+            z-index: 1;
+        }
+        li:hover img:nth-child(2){
+            display: block;
+            width: 200px;
+            height: 150px;
+            border:1px solid #000000;
+            padding:2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>HoverBox Image Callery</h3>
+    <ul>
+        <li >
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <li>
+            <img src="image/pic02.jpg">
+            <img src="image/pic02.jpg">
+        </li>
+        <li>
+            <img src="image/pic03.jpg">
+            <img src="image/pic03.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <li>
+            <img src="image/pic01.jpg">
+            <img src="image/pic01.jpg">
+        </li>
+        <div class="clean"></div>
+    </ul>
+</body>
+</html>
