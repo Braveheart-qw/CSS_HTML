@@ -61,44 +61,85 @@
             padding-right: 20px;
         }
 
+
         #ad img{
             width: 100%;
             display: block;
         }
+
         #link{
             width: 1040px;
             height: 260px;
-            background: #2ebcff;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
         }
+        #link>img{
+            width: 134px;
+            height: 134px;
+            display: block;
+        }
+
 
         #case{
             width: 100%;
             height: 610px;
             background: #dbdbdb;
         }
+
         #case_content{
             width: 1040px;
             height: 100%;
             margin: 0 auto;
         }
+        .case_one{
+            overflow: hidden;
+        }
+        .case_one p{
+            text-align: center;
+            font-size: 30px;
+            margin-top: 65px;
+            color: #fe0000;
+            font-weight: bold;
+        }
+
+        #case_content .case_two div>img{
+            width: 195px;
+            height: 249px;
+            display: block;
+        }
+
+        #case_content .case_two div>a{
+            width: 165px;
+            height: 77px;
+            display: block;
+            color: #ffffff;
+            line-height: 77px;
+            background: #2d3236;
+           padding-left: 30px;
+            font-size: 16px;
+        }
+        #case_content .case_two div:nth-child(2) a,#case_content .case_two div:nth-child(5) a{
+            background: #ff0000;
+        }
+
+
         #case_content div:nth-child(1){
             width: 100%;
             height: 204px;
         }
 
-        #case_content div:nth-child(2){
-            width: 100%;
-            height: 406px;
-            border: 1px solid #2ebcff;
-            display: flex;
-            justify-content: space-between;
-        }
-
         #case_content .case_two div{
             width: 195px;
             height: 326px;
-            border: 1px solid #ff0000;
+        }
+        #case_content .case_two{
+            width: 100%;
+            height: 406px;
+            display: flex;
+            justify-content: space-between;
         }
 
         #about_back{
@@ -166,21 +207,43 @@
         <img src="image/致美AD.jpg">
     </div>
     <div id="link" >
-
+        <a href="#"><img src="image/link01.png"></a>
+        <a href="#"><img src="image/link02.png"></a>
+        <a href="#"><img src="image/link03.png"></a>
+        <a href="#"><img src="image/link04.png"></a>
+        <a href="#"><img src="image/link05.png"></a>
     </div>
 
     <div id="case">
         <div id="case_content">
             <div class="case_one">
-
+                <p>EXHIBITION</p>
             </div>
 
             <div class="case_two">
-                <div><a href="#">1</a></div>
-                <div><a href="#">2</a></div>
-                <div><a href="#">3</a></div>
-                <div><a href="#">4</a></div>
-                <div><a href="#">5</a></div>
+                <div>
+                    <img src="image/case1.jpg">
+                    <a href="#">品牌设计</a>
+                </div>
+                <div>
+                    <img src="image/case2.jpg">
+                    <a href="#">平面设计</a>
+                </div>
+                <div>
+                    <img src="image/case3.jpg">
+                    <a href="#">网页设计</a>
+
+                </div>
+                <div>
+
+                    <img src="image/case4.jpg">
+                    <a href="#">电子商城</a>
+                </div>
+                <div>
+
+                    <img src="image/case5.jpg">
+                    <a href="#">空间/建筑</a>
+                </div>
             </div>
         </div>
     </div>
