@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        header{
+            width: 1040px;
+            height: 120px;
+            margin: 0 auto;
+            background: url("image/致美.jpg")  no-repeat;
+            position: relative;
+
+
+        }
+        header>a{
+            width: 180px;
+            height: 45px;
+            margin-right: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            text-align: center;
+            line-height: 45px;
+            background: #2d3236;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+        header ul{
+            display: inline-flex;
+            position: absolute;
+            right: 0;
+            bottom: 19px;
+        }
+        header ul li{
+            font-size: 14px;
+            padding: 0 25px;
+            border-right: 1px solid #000000;
+
+        }
+        header ul li>a{
+            color: #666666;
+        }
+        header ul li:nth-child(1){
+            padding-left: 0;
+        }
+        header ul li:first-child a{
+            color: #000000;
+        }
+        header ul li:nth-child(6){
+            border-right: none;
+            padding-right: 20px;
+        }
+
+        #ad img{
+            width: 100%;
+            display: block;
+        }
+        #link{
+            width: 1040px;
+            height: 260px;
+            background: #2ebcff;
+            margin: 0 auto;
+        }
+
+        #case{
+            width: 100%;
+            height: 610px;
+            background: #dbdbdb;
+        }
+        #case_content{
+            width: 1040px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #case_content div:nth-child(1){
+            width: 100%;
+            height: 204px;
+        }
+
+        #case_content div:nth-child(2){
+            width: 100%;
+            height: 406px;
+            border: 1px solid #2ebcff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #case_content .case_two div{
+            width: 195px;
+            height: 326px;
+            border: 1px solid #ff0000;
+        }
+
+        #about_back{
+            width: 100%;
+            height: 516px;
+            background: #cccccc;
+            opacity: .5;
+        }
+        #about_back #about{
+            width: 1040px;
+            height: 516px;
+            margin: 0 auto;
+
+        }
+
+
+        #about .about_one{
+            height: 198px;
+
+        }
+        #about .about_two{
+            height: 318px;
+            border: 1px solid #ff0000;
+            display: flex;
+        }
+         .about_two div:nth-child(1){
+             width: 750px;
+             border: 1px solid #000000;
+         }
+        .about_two div:nth-child(2){
+            width: 290px;
+            border: 1px solid #000000;
+        }
+
+        #service{
+            height: 307px;
+        }
+        #service p{
+            text-align: center;
+            font-size: 30px;
+            margin-top: 65px;
+        }
+        #service p span:nth-child(1){
+            color: #2d3236;
+        }
+        #service p span:nth-child(2){
+            color: #fe0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">186 7038 9670</a>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">成功案例</a></li>
+            <li><a href="#">关于致美</a></li>
+            <li><a href="#">在线咨询</a></li>
+            <li><a href="#">会员注册</a></li>
+            <li><a href="#">会员登陆</a></li>
+        </ul>
+    </header>
+    <div id="ad">
+        <img src="image/致美AD.jpg">
+    </div>
+    <div id="link" >
+
+    </div>
+
+    <div id="case">
+        <div id="case_content">
+            <div class="case_one">
+
+            </div>
+
+            <div class="case_two">
+                <div><a href="#">1</a></div>
+                <div><a href="#">2</a></div>
+                <div><a href="#">3</a></div>
+                <div><a href="#">4</a></div>
+                <div><a href="#">5</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about_back">
+        <div id="about">
+            <div class="about_one">
+
+            </div>
+            <div class="about_two">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="service">
+        <p>
+            <span>SERVICE </span>
+            <span>PROCESS</span>
+        </p>
+    </div>
+</body>
+</html>
