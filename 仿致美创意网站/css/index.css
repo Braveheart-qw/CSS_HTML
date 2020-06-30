@@ -1,3 +1,7 @@
+@media screen and (max-width: 1040px){
+    p{font-size: 12px;}
+    a{font-size: 12px;}
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +10,10 @@
 }
 header{
     width: 1040px;
+    min-width: 1040px;
     height: 120px;
     margin: 0 auto;
-    background: url("image/致美.jpg")  no-repeat;
+    background: url("../image/致美.jpg")  no-repeat;
     position: relative;
 
 
@@ -23,10 +28,11 @@ header>a{
     display: block;
     text-align: center;
     line-height: 45px;
-    background: #2d3236 url("image/callout.png") no-repeat left 11px top 10px;
-    background-size: 24px;
+    background: #2d3236 url("../image/时钟.png") no-repeat left 11px top 10px;
+    background-size: 27px;
     color: #ffffff;
     margin-right: 20px;
+    transition: background-color 0.5s linear;
 }
 header>a:hover{
     background-color: #fe0000;
@@ -41,7 +47,6 @@ header ul li{
     font-size: 14px;
     padding: 0 25px;
     border-right: 1px solid #000000;
-
 }
 header ul li>a{
     color: #666666;
@@ -57,11 +62,54 @@ header ul li:nth-child(6){
     padding-right: 20px;
 }
 
+#ad{
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    min-width: 1040px;
+    min-height: 400px;
+}
 
-#ad img{
+#ad .img_box img{
     width: 100%;
     display: block;
-    min-width: 1040px;
+    min-height: 400px;
+
+}
+#ad .img_box{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+
+
+}
+
+#ad .btn_box{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+}
+#ad .btn_box a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid;
+    margin: 0 50px;
+    background-color: rgba(0,0,0,0.2);
+    color: #ffffff;
+    line-height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 50px;
+    transition: background-color 0.5s linear;
+}
+#ad .btn_box a:hover{
+    background-color: rgba(0,0,0,0.7);
 }
 
 #link{
@@ -84,6 +132,7 @@ header ul li:nth-child(6){
     width: 100%;
     height: 610px;
     background: #dbdbdb;
+    min-width: 1040px;
 }
 
 #case_content{
@@ -107,6 +156,9 @@ header ul li:nth-child(6){
 }
 .case_one p:nth-child(2) span{
     color: #000000;
+}
+#case #case_content .case_two div>a:hover{
+    background: #fe0000;
 }
 
 #case_content .case_two div>img{
@@ -150,6 +202,7 @@ header ul li:nth-child(6){
     width: 100%;
     height: 516px;
     background: #f2f2f2;
+    min-width: 1040px;
 }
 #about_back #about{
     width: 1040px;
@@ -194,7 +247,7 @@ header ul li:nth-child(6){
 }
 .about_two div:nth-child(1){
     width: 1040px;
-    background: url("image/zhimei.jpg") right bottom no-repeat;
+    background: url("../image/zhimei.jpg") right bottom no-repeat;
 }
 .about_two div p{
     text-align: center;
@@ -209,6 +262,7 @@ header ul li:nth-child(6){
 
 #service{
     height: 307px;
+    min-width: 1040px;
 }
 #service p{
     text-align: center;
@@ -232,19 +286,19 @@ header ul li:nth-child(6){
     padding-left:30px;
 }
 #service ul li:nth-child(1){
-    background: url("image/Call-h.png") no-repeat;
+    background: url("../image/Call-h.png") no-repeat;
     background-size: 26px;
 }
 #service ul li:nth-child(3){
-    background: url("image/money.png") no-repeat;
+    background: url("../image/money.png") no-repeat;
     background-size: 26px;
 }
 #service ul li:nth-child(5){
-    background: url("image/gongju.png") no-repeat;
+    background: url("../image/gongju.png") no-repeat;
     background-size: 26px;
 }
 #service ul li:nth-child(7){
-    background: url("image/wancheng.png") no-repeat;
+    background: url("../image/wancheng.png") no-repeat;
     background-size: 26px;
 }
 #service ul li:nth-child(even){
@@ -252,10 +306,18 @@ header ul li:nth-child(6){
     padding-left: 0;
     margin: 0  10px;
 }
+#service .qq{
+    color: #fe0000;
+    transition: background-color 0.5s linear;
+}
+#service .qq:hover{
+    background-color: #666666;
+}
 footer{
     background: #2d3236;
     height: 200px;
     overflow: hidden;
+    min-width: 1040px;
 }
 footer p{
     text-align: center;
