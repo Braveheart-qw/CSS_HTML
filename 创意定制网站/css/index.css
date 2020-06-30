@@ -1,7 +1,9 @@
-@media screen and (max-width: 1040px){
-    p{font-size: 12px;}
-    a{font-size: 12px;}
-}
+
+/*媒体查询*/
+html{font-size: 100%;}
+@media (min-width:640px){body{font-size:1rem;}}
+@media (min-width:960px){body{font-size:1.2rem;}}
+@media (min-width:1200px){body{font-size:1.5rem;}}
 *{
     margin: 0;
     padding: 0;
