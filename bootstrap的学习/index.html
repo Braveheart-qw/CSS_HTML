@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
     <style>
 
         div{
@@ -12,6 +16,10 @@
         }
         li{
             border: 1px solid #ff0000;
+        }
+
+        footer{
+            height: 500px;
         }
     </style>
 </head>
@@ -121,7 +129,115 @@
     重点是：提示框动画，可以自行删除该提示框
     https://www.runoob.com/bootstrap4/bootstrap4-alerts.html-->
 
-<!---->
+<!--按钮，bootstrap提供的按钮样式 可以应用于<a>、<button>、<input>上
+    btn-lg 是大号按钮
+    btn-sm 是小号按钮
+    默认不写：是正常按钮
+-->
+    <div class="container">
+        <button class="btn">基本按钮</button>
+        <button class="btn btn-primary">基本按钮</button>
+        <button class="btn btn-secondary">次要按钮</button>
+        <button class="btn btn-success">成功</button>
+        <button class="btn btn-info">信息</button>
+        <button type="button" class="btn btn-warning">警告</button>
+        <button type="button" class="btn btn-danger">危险</button>
+        <button type="button" class="btn btn-dark">黑色</button>
+        <button type="button" class="btn btn-light">浅色</button>
+        <button type="button" class="btn btn-link">链接</button>
+        <hr />
 
+        <a href="#" class="btn btn-info " role="button">链接按钮</a>
+        <button type="button" class="btn btn-info">按钮</button>
+        <input type="button" class="btn btn-info" value="输入框按钮">
+        <input type="submit" class="btn btn-info" value="提交按钮">
+
+        <hr />
+        <!-- 为按钮设置边框 -->
+        <button type="button" class="btn btn-outline-primary">主要按钮</button>
+        <button type="button" class="btn btn-outline-secondary">次要按钮</button>
+        <button type="button" class="btn btn-outline-success">成功</button>
+        <button type="button" class="btn btn-outline-info">信息</button>
+        <button type="button" class="btn btn-outline-warning">警告</button>
+        <button type="button" class="btn btn-outline-danger">危险</button>
+        <button type="button" class="btn btn-outline-dark">黑色</button>
+        <button type="button" class="btn btn-outline-light text-dark">浅色</button>
+    </div>
+
+<!--按钮组
+    可以控制按钮组大小
+    可以垂直排列按钮组
+    可以内嵌按钮组以及下拉菜单
+    可以实现拆分下拉菜单
+
+    -->
+    <div class="container">
+        <!--普通按钮组        -->
+        <div class="btn-group">
+            <button class="btn btn-success">A</button>
+            <button class="btn btn-success">B</button>
+            <button class="btn btn-success">C</button>
+        </div>
+        <!--垂直按钮组        -->
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        <br />
+        <!--内嵌按钮组及下拉菜单
+         需要用到js-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Samsung</button>
+
+                <!--下来菜单的实现就好比调用了一个函数（dropdown），然后单击就会触发dropdown-menu函数-->
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Sony
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                </div>
+
+        </div>
+        <!--拆分下拉菜单-->
+        <div class="container">
+            <h2>拆分按钮下拉菜单</h2>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Sony</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Sony</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Tablet</a>
+                    <a class="dropdown-item" href="#">Smartphone</a>
+                </div>
+            </div>
+        </div>
+        <!--   垂直按钮组下拉的实现
+            和上面下拉菜单一样只不过将按钮组改成了垂直-->
+        <div class="btn-group-vertical">
+            <button class="btn btn-danger " >hello</button>
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">hello</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">123</a>
+                <a class="dropdown-item" href="#">123</a>
+            </div>
+
+        </div>
+<footer>
+
+</footer>
 </body>
 </html>
