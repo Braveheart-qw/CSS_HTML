@@ -21,4 +21,13 @@ bootstrap的学习
             order-12在最后，order-1在第一
 
 
+        【注意】必须是html5格式，并且移动设备优先
+        <meta name="viewport" content="width=device-width,initial-scale=1">'
+        也可以添加user-scalable=no  禁止用户缩放
+
+
+
+
+
+
 
