@@ -6,33 +6,57 @@
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap.css">
     <style>
-        div{
-            border: 1px solid;
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
-        .center{
-            height: 500px;
+        div{
+            border:1px solid;
+        }
+        li{
+            border: 1px solid #ff0000;
         }
     </style>
 </head>
 <body>
+    <!-- container布局容器
+         container-fluid布局
+         区别：container用于固定宽度，并且支持响应式
+               container-fluid占据100%的宽度
+         【注意】这两种布局容器都是自带padding：0 15px值，border: 1px 值-->
     <div class="container">
+            <!--虽说contain自带padding值，但是row栅格已经处理掉这个问题
+                 左右各减去margin：-15px，这样就可以相互弥补-->
         <div class="row">
-            <div class="col-12">123</div>
+        <!--col：自带padding: 0 15px-->
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+            <div class="col-4">3</div>
         </div>
-        <div class="row center">
-            <div class="col-sm-3">123</div>
-            <div class="col-sm-6">123</div>
-            <div class="col-sm-3">123</div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="row">
-                <div class="col-2">1</div>
-                <div class="col-2">2</div>
-                <div class="col-2">3</div>
-                </div>
+    </div>
+
+<!--    偏移量是从0-11,首先判断当前行内是否有元素，
+        没有，就从起始位置开始，
+        有，就从最后一个元素的末尾开始-->
+    <div class="container-fluid">
+        <h1>偏移列</h1>
+        <p>.offset-md-4 是把.col-md-4 往右移了四列格。</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 bg-success">.col-md-4</div>
+                <div class="col-md-4 offset-md-4 bg-warning">.col-md-4 .offset-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 offset-md-3 bg-success">.col-md-3 .offset-md-3</div>
+                <div class="col-md-3 offset-md-0 bg-warning">.col-md-4 .offset-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 bg-success">.col-md-6 .offset-md-3</div>
             </div>
         </div>
     </div>
+
+
 </body>
 </html>
