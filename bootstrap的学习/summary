@@ -1,0 +1,24 @@
+bootstrap的学习
+
+        1.什么是bootstrap？
+         web前端UI框架，将网页中常见的特效以及布局封装好，需要什么就从文档中查找
+
+         特色：
+            响应式布局
+            基于flex的栅格系统
+            丰富的组件和工具方法
+            常见交互使用
+
+         【注意】在bootstrap所有的盒子模型都是从border开始的（非正常）
+                content-box(正常的)
+
+
+
+        使用：调用类名
+            row ：一行
+            col ： 列平均分配     （col-sm：在不满足响应式布局时，会垂直排列）具体见（xm-sm-md-xl.png)
+            pl-0：代表padding-left: 0; 其它相同pr-0等 【py-5:在y轴上的padding值，pt-n5：n代表负数】
+            order-12在最后，order-1在第一
+
+
+
