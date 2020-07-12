@@ -6,11 +6,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
+
         div{
             border:1px solid;
         }
@@ -57,6 +53,75 @@
         </div>
     </div>
 
+<!--文字排版
+    <small></small>标签用来创建字体更小，颜色更浅的文字
+    <mark></mark>将选中的文本高亮显示
+    <abbr></abbr>显示文本一条虚线   (扩展)此标签的title属性自带样式，可用于提示说明
+    在类上添加blockquote，可以强调引用内容
+    更多文字样式设置：https://www.runoob.com/bootstrap4/bootstrap4-typography.html
+    -->
+    <div class="container">
+        <h1 >h1 Bootstrap <small>标题</small> (2.5rem = 40px)</h1>
+        <h2>h2 Bootstrap <small>标题</small>  (2rem = 32px)</h2>
+        <h3>h3 Bootstrap <small>标题</small>  (1.75rem = 28px)</h3>
+        <h4>h4 Bootstrap <mark title="b">标题</mark> (1.5rem = 24px)</h4>
+        <h5>h5 <abbr title="BootStrap">BS</abbr> 标题 (1.25rem = 20px)</h5>
+        <h6 >“h6 Bootstrap 标题 (1rem = 16px)“</h6>
+        <!--dd和dt-->
+        <dl>
+            <dt>AAA</dt>
+            <dd>123</dd>
+            <dt>BBB</dt>
+            <dd>456</dd>
+        </dl>
+        <!--kpd强调快捷键方式-->
+        <p style="font-weight: bold">快捷键：<kpd>CTRL+T</kpd></p>
+    </div>
+
+<!--表格类
+    在类上添加table,会自动添加商务风格的样式
+    在类上添加table-striped会自动添加条纹风格的表格样式
+    在类上添加table-bordered会自动添加带边框风格的样式
+    在类上添加table-hover会自动为每一行添加鼠标悬停效果
+    还可以为每一行添加指定的颜色：更多操作见：
+    https://www.runoob.com/bootstrap4/bootstrap4-tables.html
+    -->
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>专业</th>
+                    <th>班级</th>
+                    <th>学号</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                     <td>计算机科学与技术</td>
+                     <td>三班</td>
+                     <td>钱旺</td>
+                </tr>
+                <tr>
+                    <td>计算机科学与技术</td>
+                    <td>三班</td>
+                    <td>钱旺</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!--图片设置效果
+    详情：https://www.runoob.com/bootstrap4/bootstrap4-images.html-->
+
+<!--Jumbotron
+    创建一个大的灰色背景框-->
+
+
+<!--信息提示框
+    重点是：提示框动画，可以自行删除该提示框
+    https://www.runoob.com/bootstrap4/bootstrap4-alerts.html-->
+
+<!---->
 
 </body>
 </html>
