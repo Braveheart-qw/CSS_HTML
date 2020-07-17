@@ -130,4 +130,20 @@
         </li>
     </ul>
 </body>
+<script>
+    var li = document.getElementsByTagName("li");
+    for(var i = 0 ; i < li.length ; i++){
+        li[i].count = i;
+        li[i].onclick = function(){
+            var p = li[this.count].getElementsByTagName("p")[0];
+            var height = getComputedStyle(p)["height"];
+
+            if (height != "0px"){
+                p.style.height = "0px";
+            }else{
+                p.style.height = "100px";
+            }
+        }
+    }
+</script>
 </html>
