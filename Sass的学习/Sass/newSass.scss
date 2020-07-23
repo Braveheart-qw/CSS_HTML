@@ -1,0 +1,36 @@
+
+//单行注释  不会被编译出来
+/*
+  多行注释  会被编译出来
+*/
+.box{
+  height: 100px;
+}
+
+//Sass定义变量通过 $+变量名 ：value
+//Less通过@+变量名 ：value
+$number : 123px;
+.box2{
+  width: $number;
+}
+
+//插值 sass通用#{}调用
+//Less使用${}调用
+
+$key : margin;
+$i : 3;
+box#{$i}{
+  #{$key} : auto;
+}
+
+//作用域 同java js 相同
+//作用域 当前作用范围找不到该值，会继续向上找
+//Sass的作用域是有顺序的
+//Less没有
+$number : 50px;
+.box4{
+  $number : 1px;
+  height: $number;
+}
+
+
