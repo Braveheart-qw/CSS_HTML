@@ -139,7 +139,196 @@ a2{
     height: 300px;
 }
 
+//函数的学习
 
+//一 字符串函数
+/*1.quote  给参数加上引号
+  中间不允许为空格
+*/
+p{
+  content: quote(hello);
+}
 
+/*
+  2.unquote 去除参数的引号
+*/
+p{
+  content: unquote("hello");
+}
 
+/*
+  3.str-index返回字符串第一次出现的位置
+  sass里面 字符串下标是从 1 开始的
+*/
+p{
+  content: str-index("123456789","3");
+}
 
+/*
+  4.str-insert在某个字符串的某个位置插入某个子串
+*/
+p{
+  content: str-insert("12456789","3",3);
+}
+
+/*
+  5.str-slice 截取字符串
+  区间范围为闭合[start , end]
+*/
+p{
+  content: str-slice("123456789",6,8);
+  //如果为定义结束位置则默认截取到末尾
+  content: str-slice("123456789",5);
+}
+
+/*
+  to-upper-case   转换为大写
+  to-lower-case   转换为小写
+*/
+p{
+  content: to-upper_case("abc");
+  content: to_lower_case("YIO");
+}
+
+/*
+  unique-id 返回一个无引号的随机字符串作为id
+  只能保证在单次的sass编译中确保id的唯一性
+*/
+p{
+  content: unique_id();
+}
+
+//二 数学函数
+/*
+  1. abs  返回一个数的绝对值
+*/
+p{
+  content: abs(-15);
+}
+
+/*
+  2. ceil 向上取整
+*/
+p{
+  content: ceil(3.3);
+}
+
+/*
+  3. floor 向下取整
+*/
+p{
+  content: floor(3.9);
+}
+
+/*
+  4. comparable(num1 , num2) 返回一个布尔值
+  判断两个参数是否可以进行比较
+*/
+p{
+  content: comparable(15px , 15);
+  content: comparable(15px , 25px);
+  content: comparable(10mm , 25cm);
+  content: comparable(15px , 10cm);
+  content: comparable(15px , 2rem);
+  content: comparable(15px , 2em);
+}
+
+/*
+  5. max  返回参数中最大的数
+     min  返回参数中最小的数
+     注意：参数可以是任意个
+*/
+p{
+  content: max(2,-3,5,6,7,1,8,6);
+  content: min(45,6,3,748,-9,425,-6,48);
+}
+
+/*
+  6. percentage 将数字转换为百分比形式
+*/
+p{
+  content: percentage(0.7);
+}
+
+/*
+  7. random(number) 返回 1 和 参数 之间任意的值
+  范围：[1,number];
+*/
+p{
+  content: random(18);
+}
+
+/*
+  8. round(number) 返回最接近该数的一个整数，四舍五入
+*/
+p{
+  content: round(15.3);
+}
+
+//三 列表函数
+
+/*
+  1. append(list , value) 将value 追加到列表的末尾
+  列表下标是从 1 开始
+*/
+p{
+  content: append(("hello" , 7) , "new");
+}
+
+/*
+  2. index(list , value) 返回list列表中value的下标，没有就是null
+*/
+p{
+  content: index((1 2 3 4 5) , 3);
+}
+
+/*
+  3. is-bracketed(list) 判断list列表中是否含有中括号
+*/
+p{
+  content: is_bracketed([]);
+}
+
+/*
+  4. join(list1 , list2) 将list2 加入到list1
+*/
+p{
+  content: join((5,6,7),9 10 11);
+  content: join((5 6 7),9 10 11);
+}
+
+/*
+  5. length(list) 返回list列表的长度
+*/
+p{
+  content: length(15 20 30);
+}
+
+/*
+  6. list-separator 返回分隔符类型
+*/
+p{
+  content: list_separator(15 60 30);
+}
+
+/*
+  7.nth(list , n) 获取第n项的值
+*/
+p{
+  content: nth(a b c , 2);
+}
+
+/*
+  8. set-nth(list , n , value) 替换第n项的值
+*/
+p{
+  content: set_nth(5 10 15,2,15);
+}
+
+/*
+ 9. zip(list) 将多个离别按照以相同索引值为一组，重新组成一个新的多维度列表
+ */
+p{
+  content: zip(1px 2px 3px , solid dashed dotted , #fe0000 #ffffff #000000);
+  content: zip(#fe0000 #ffffff #000000 , url("#1") url("#2") url("#3") , no-repeat repeat no-repeat);
+}
