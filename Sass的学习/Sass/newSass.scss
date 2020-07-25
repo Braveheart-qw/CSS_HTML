@@ -28,8 +28,118 @@ box#{$i}{
 //Less没有
 $number : 50px;
 .box4{
-  $number : 1px;
   height: $number;
+  $number : 1px;
 }
+//设置全局作用域  关键字：!global;
+$i : 5;
+box#{$i}{
+    $i : 20 !global;
+    height: 18px;
+}
+$p : p;
+#{$p}{
+    height:100px;
+}
+
+//sass的嵌套规则类似于HTML的嵌套规则
+ul{
+  li:first-child{
+    a{
+      display: block;
+    }
+  }
+
+  li{
+    p{
+      height: 68px;
+    }
+  }
+}
+
+//sass不仅可以进行以上的标签嵌套，也可以进行属性嵌套，类似于css的简写(属性无法嵌套)
+//如：background: #fe0000 url("#") 50px 50px
+
+
+/*
+类似 CSS，Sass 支持 @import 指令。
+
+@import 指令可以让我们导入其他文件等内容。
+
+CSS @import 指令在每次调用时，都会创建一个额外的 HTTP 请求。但，Sass @import 指令将文件包含在 CSS 中，不需要额外的 HTTP 请求。
+
+Sass @import 指令语法如下：
+
+@import filename;
+*/
+
+@import "secondSass";
+
+//引用未编译的sass文件，也就是说只有sass文件 而没有对应的css文件
+@import "threeSass";
+
+//1.封装一个mixin的混入
+@mixin text_style{
+    text-decoration: none;
+    text-align: center;
+}
+//2.引入text_style样式函数
+p{
+  @include text_style;
+  weight: 300px;
+}
+
+//3.以上就是无参样式函数的使用，也可以使用有参方法调用
+@mixin font_style($l){
+  text-align: center;
+  line-height: $l;
+}
+
+p{
+  @include font_style(26px);
+}
+
+//4.样式函数的参数也可以设为默认值，如：重构 3.的测试
+@mixin font_style($l: 15px){
+  text-align: center;
+  line-height: $l;
+}
+
+p{
+  @include font_style;
+}
+
+//5.有时候我们并不能确定需要多少个具体参数，如background: 后面的参数个数是可变的，
+//所以我们可以使用类似于java中动态数组的方法，格式：...
+@mixin background_style($style...){
+  background:$style;
+}
+
+p{
+    @include background_style(#fe0000);
+}
+p1{
+    @include background_style(#ffffff  url("#"));
+}
+
+//@extend 继承 和类继承功能相同，共同的特性可以封装一个父类，然后不同的子类继承
+a{
+    text-align: center;
+    text-decoration: none;
+}
+
+//现在我需要定义一个a1继承a,并且为a1定义宽高
+a1{
+    @extend a;
+    height: 500px;
+}
+//定义a2继承a1,并且为 a2 覆盖高的值，
+a2{
+    @extend a1;
+    height: 300px;
+}
+
+
+
 
 
