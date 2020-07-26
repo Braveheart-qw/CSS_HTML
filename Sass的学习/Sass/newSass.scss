@@ -57,6 +57,23 @@ ul{
   }
 }
 
+//sass还可以进行伪类嵌套
+ul{
+  li{
+    a{
+      height: 26px;
+
+      //虽然伪类可以进行嵌套  但是，转换的形式会多出一个空格，需要在前面加上&符号
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    p{
+      height: 300px;
+    }
+  }
+}
+
 //sass不仅可以进行以上的标签嵌套，也可以进行属性嵌套，类似于css的简写(属性无法嵌套)
 //如：background: #fe0000 url("#") 50px 50px
 
@@ -73,7 +90,7 @@ Sass @import 指令语法如下：
 @import filename;
 */
 
-@import "secondSass";
+// @import "secondSass";
 
 //引用未编译的sass文件，也就是说只有sass文件 而没有对应的css文件
 @import "threeSass";
@@ -332,3 +349,99 @@ p{
   content: zip(1px 2px 3px , solid dashed dotted , #fe0000 #ffffff #000000);
   content: zip(#fe0000 #ffffff #000000 , url("#1") url("#2") url("#3") , no-repeat repeat no-repeat);
 }
+
+//map映射
+
+/*
+  1. map-get(map , key);   返回map中指定key 对应的 值
+*/
+p{
+  $map : ("key1" : "hello" ,"key2" : "world");
+  content: map-get($map , "key2");
+}
+
+/*
+  2. map-has-key(map , key);  返回map中是否含有 指定的key
+  有：true
+  否：false
+*/
+p{
+  $map : ("key1" : "hello" ,"key2" : "world");
+  content: map-has_key($map , "key3");
+}
+
+/*
+  3. map-keys(map); 返回map中 key 组成的队列
+     map-values(map); 返回map中values组成的队列
+*/
+
+/*
+  4. map-merge(map1 , map2); 合并两个map 形成一个新的map类型
+*/
+p{
+  $map1 : ("key1" : "hello" ,"key2" : "world");
+  $map2 : ("key3" : "hello" ,"key4" : "world");
+}
+
+/*
+  5. map-remove(map , keys)移除map中指定的多个key
+*/
+p{
+  $map1 : ("key1" : "hello" ,"key2" : "world","key3" : "1" ,"key4" : "2");
+ //  content: map-remove($map1 ,"key1","key2");
+}
+
+// 选择器
+/*
+  1. is-superselector(super , sup）; 判断super 是否包含sup选择器
+  是：true
+  否：false
+
+*/
+p{
+  content: is-superselector("div" , "div.box");
+  content: is-superselector("div box" , "box");
+  content: is-superselector("a" , "div a");
+}
+
+/*
+  2. selector-append(selectors) 将第二个（也可以有多个）添加到第一个选择器的后面
+*/
+p{
+  contente: selector-append("div" , "_a");
+}
+/*
+  3. selector-nest(selectors) 返回一个新的选择器，该选择器通过提供的列表进行嵌套
+*/
+p{
+  content: selector_nest("div","a","p");
+  content: selector_nest("ul" , "li");
+}
+/*
+  4. selector-parse()将一个给定的字符串形式的选择器，转换成新的选择器队列
+*/
+p{
+  content: selector-parse("div ui li a");
+}
+
+/*
+  5. selector-replace(selector , replace , value) 给定一个选择器使用value 替换掉replace
+*/
+p{
+  content: selector-replace("div ul li" , "ul" , "div");
+}
+
+/*
+  6. selector-unify(selector1 , selector2)将两组选择器合成一个复合选择器，如两个选择器无法合成，则返回null值
+*/
+p{
+  content: selector_unify("div" , "a");
+}
+
+/*
+  7. simple-selectors(selector)将复合选择器拆为单个选择器
+*/
+p{
+  //simple-selectors("div.myinput");
+}
+
