@@ -13,9 +13,48 @@ p{
     //sass中单位不同的话，不可以运算
    // height: $num + 10em;
 
-    // 默认 / 时分隔操作
+    // 默认 /  是分隔操作
     font: 20px / 1.5;
 
     //  / 想要除法的功能，需要使用小括号
     font: (20px / 1.5)
 }
+
+/*sass除了内置函数，还可以自定义函数
+    @function 函数名(){
+
+        @return
+    }
+
+    函数和js用法大致相同
+*/
+
+@function sum($n){
+
+    @if($n == 1){
+        @return 1;
+    }@else{
+        @return sum($n - 1)+$n;
+    }
+
+}
+p{
+    content: sum(100);
+}
+
+/*
+sass 循环操作
+@for $i from start through end{
+
+}
+*/
+$sum : 0;
+@for $i from 0 through 5{
+    $sum : $sum + $i;
+}
+p{
+    width: $sum;
+}
+
+
+
